@@ -1,0 +1,32 @@
+.container {
+  margin: 0 auto;
+  max-width: $containerWidth;
+  width: 100%;
+  padding: 0 30px;
+  @media (max-width: $breakpoint992){
+    padding: 0 20px;
+  }
+  @media (max-width: $breakpoint768){
+    padding: 0 15px;
+  }
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  background-color: #FFFFFF;
+}
+
+.btn {
+  color: $btn-text;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 10px 13px;
+  background: linear-gradient(274.27deg, rgba(255, 255, 255, 0) -14.6%, rgba(255, 255, 255, 0.39) 39.52%, rgba(255, 255, 255, 0) 110.6%), linear-gradient(263.81deg, #FFC771 10.32%, #FFC858 98.17%);
+  box-shadow: inset 0px 2px 15px rgba(255, 255, 255, 0.41), inset 19px 0px 25px rgba(255, 255, 255, 0.11);
+  position: relative;
+  border-bottom: 2px solid #D0A863;
+}
+
