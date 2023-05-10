@@ -1,8 +1,18 @@
 .header {
-  background-color: $bg-dark;
+  // background-color: $bg-dark;
+  background: radial-gradient(26.6% 60% at 67% 55%, rgba(0, 0, 0, 0.75) 0%, #272624 100%), url(../img/header__bg.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   &__nav {
     padding-top: 35px;
+  }
+
+  &__logo {
+    @media (max-width: $breakpoint480){
+      width: 80px;
+    }
   }
 }
 
@@ -13,7 +23,6 @@
   @media (max-width: $breakpoint480){
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: center;
   }
 
   &__item {
@@ -25,6 +34,7 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
+    border-radius: 10px;
 
     & span {
       display: block;
@@ -55,11 +65,176 @@
     line-height: 24px;
     font-weight: 500;
     letter-spacing: 1px;
+    @media (max-width: $breakpoint480){
+      font-size: 18px;
+      text-align: end;
+    }
   }
 
   &__btn {
     @media (max-width: $breakpoint768){
       display: none;
+    }
+  }
+}
+
+.section__hero{
+  padding-top: 10px;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  position: relative;
+
+  @media (max-width: $breakpoint992){
+    flex-direction: column;
+    align-items: center;
+  }
+  @media (max-width: $breakpoint480){
+    gap: 20px;
+  }
+
+  // left
+
+  &__item_left {
+    flex: 0 1 480px;
+    @media (max-width: $breakpoint992){
+      flex: 0 1 100%;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    color: $light;
+    margin-top: 135px;
+    text-align: start;
+    @media (max-width: $breakpoint992){
+      margin-top: 50px;
+      font-size: 36px;
+      text-align: center;
+    }
+    @media (max-width: $breakpoint480){
+      font-size: 28px;
+      line-height: 40px;
+      margin-top: 20px;
+    }
+
+    & span {
+      color: $yelow;
+      font-style: italic;
+      font-weight: 600;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: $light;
+    margin-top: 60px;
+    font-weight: 500;
+
+    @media (max-width: $breakpoint992){
+      display: none;
+    }
+
+    & li {
+      position: relative;
+      padding-left: 30px;
+      &::after {
+        content: "";
+        display: block;
+        width: 18px;
+        height: 18px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-image: url(../img/hero__checkbox.svg);
+        background-position: top,right;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+
+  &__btn {
+    margin-top: 100px;
+    width: 340px;
+    padding: 28px 20px;
+    position: relative;
+    margin-bottom: 70px;
+
+    @media (max-width: $breakpoint992){
+      position: absolute;
+      left: calc(50% - 170px);
+      bottom: 0;
+      z-index: 1;
+    }
+    @media (max-width: $breakpoint480){
+      width: 280px;
+      font-size: 12px;
+      left: calc(50% - 140px);
+      bottom: -40px;
+      padding: 20px 15px;
+    }
+
+    &::after{
+      display: block;
+      content: "";
+      position: absolute;
+      width: 90px;
+      height: 130px;
+      background-image: url(../img/hero__pan.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      bottom: 25px;
+      right: -10px;
+    }
+  }
+
+
+  // right 
+  &__item_right {
+    position: relative;
+  }
+
+  &__image {
+    max-width: 540px;
+    width: 100%;
+    height: auto;
+    @media (max-width: $breakpoint992){
+      max-width: 480px;
+    }
+    @media (max-width: $breakpoint480){
+      max-width: 340px;
+    }
+  }
+
+  &__info {
+    color: $light;
+    font-weight: 500;
+    display: flex;
+    min-width: 190px;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background-color: #31313199;
+    padding: 10px 20px;
+    gap: 5px;
+    & span {
+      font-style: italic;
+      font-weight: 400;
+    }
+    @media (max-width: $breakpoint768){
+      left: calc(50% - 90px);
+    }
+    @media (max-width: $breakpoint480){
+      font-size: 12px;
     }
   }
 }
