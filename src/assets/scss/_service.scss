@@ -1,0 +1,79 @@
+.section__service {
+  padding-top: 150px;
+  @media (max-width: $breakpoint768){
+    padding-top: 75px;
+  }
+}
+
+.service{
+  &__subtitle{
+    margin-bottom: 45px;
+  }
+}
+
+.advantages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+
+  &__item {
+    flex: 0 1 48%;
+    box-shadow: 0px 2px 24px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 30px 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+
+    @media (max-width: $breakpoint992){
+      flex: 0 1 80%;
+    }
+    @media (max-width: $breakpoint480){
+      flex: 0 1 100%;
+    }
+
+    &_1{
+      background-image: url(../img/advantages1.png);
+    }
+    &_2{
+      background-image: url(../img/advantages2.png);
+    }
+    &_3{
+      background-image: url(../img/advantages3.png);
+    }
+    &_4{
+      background-image: url(../img/advantages4.png);
+    }
+    &_5{
+      background-image: url(../img/advantages5.png);
+    }
+    &_6{
+      background-image: url(../img/advantages6.png);
+    }
+  }
+
+  &__info{
+    width: 70%;
+  }
+
+  &__title{
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    @media (max-width: $breakpoint480){
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+    @media (max-width: $breakpoint480){
+      font-size: 14px;
+    }
+  }
+}
