@@ -25,9 +25,12 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: right;
+    color: $text-color;
 
     @media (max-width: $breakpoint992){
       flex: 0 1 80%;
+      min-height: 140px;
+      height: 100%;
     }
     @media (max-width: $breakpoint480){
       flex: 0 1 100%;
