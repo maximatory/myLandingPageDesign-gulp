@@ -16,6 +16,7 @@
   &__form{
     display: flex;
     justify-content: space-between;
+    position: relative;
     gap: 20px;
     @media (max-width: $breakpoint768){
       flex-direction: column;
@@ -36,10 +37,25 @@
         width: 100%;
       }
     }
+
+    &-message{
+      bottom: -68px;
+      display: none;
+      animation: question-form-message 1s ease-in-out;
+    }
   }
   &__btn {
     @media (max-width: $breakpoint768){
       width: 100%;
     }
+  }
+}
+
+@keyframes question-form-message {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
   }
 }

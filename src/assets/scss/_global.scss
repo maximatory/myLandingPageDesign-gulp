@@ -30,10 +30,6 @@ body {
   border-bottom: 2px solid #D0A863;
   transition: 0.3s all;
   text-transform: uppercase;
-
-  &:hover{
-    transform: scale(1.1);
-  }
 }
 
 .section {
@@ -58,5 +54,19 @@ body {
       font-size: 20px;
     }
   }
+}
+
+.form-message {
+  position: absolute;
+  background-color: #0df10adc;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: $text-color;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  padding: 20px 0;
+  left: 0;
 }
 

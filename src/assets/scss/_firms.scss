@@ -79,11 +79,12 @@
 }
 
 .form{
-  padding: 70px 20px;
+  padding: 80px 20px;
   flex: 0 1 455px;
+  position: relative;
   @media (max-width: $breakpoint768){
     flex: 0 1 100%;
-    padding: 50px 20px;
+    padding: 80px 20px;
   }
 
   &__title{
@@ -118,6 +119,21 @@
   &__btn{
     width: 100%;
     height: 77px;
-    margin-top: 80px;
+    margin-top: 50px;
+  }
+
+  &__message{
+    bottom: 0;
+    display: none;
+    animation: firm-form-message 1s ease-in-out;
+  }
+}
+
+@keyframes firm-form-message {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
   }
 }

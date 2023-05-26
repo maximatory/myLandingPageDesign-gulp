@@ -1,5 +1,5 @@
-.modal {
-  display: block; /* Скрыто по умолчанию */
+.modal-form {
+  display: none; 
   position: fixed; /* Оставаться на месте */
   z-index: 100; /* Сидеть на вершине */
   padding-top: 100px; /* Расположение коробки */
@@ -10,30 +10,59 @@
   overflow: auto; /* Включите прокрутку, если это необходимо */
   background-color: rgb(0,0,0); /* Цвет запасной вариант  */
   background-color: rgba(0,0,0,0.9); /*Черный с непрозрачностью */
+
+  &__message{
+    bottom: 0px;
+    animation: form-message 1s ease-in-out;
+  }
+}
+
+@keyframes form-message {
+  0% {
+    bottom: -60px;
+  }
+  100%{
+    bottom: 0;
+  }
 }
 
 /*Модальное содержание (изображение) */
-.modal-content {
+.modal-from__content {
   margin: auto;
   display: block;
   width: 90%;
-  max-width: 900px;
+  max-width: 500px;
+  background-color: #fff;
+  padding: 100px 20px;
+  border-radius: 10px;
+  position: relative;
+  overflow-y: hidden;
+
+  & h2 {
+    margin-bottom: 30px;
+  }
+
+  & form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    & input {
+      border: 2px solid $text-color;
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+
+    & button {
+      margin-top: 30px;
+    }
+  }
 }
 
-/* Заголовок модального изображения */
-#caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  height: 150px;
-}
+
 
 /* Добавить анимацию */
-.modal-content, #caption {  
+.modal-form__content {  
   -webkit-animation-name: zoom;
   -webkit-animation-duration: 0.6s;
   animation-name: zoom;
@@ -51,18 +80,18 @@
 }
 
 /* Кнопка закрытия */
-.close {
+.close-form {
   position: absolute;
   top: 15px;
   right: 35px;
-  color: #f1f1f1;
+  color: $text-color;
   font-size: 40px;
   font-weight: bold;
   transition: 0.3s;
 }
 
-.close:hover,
-.close:focus {
+.close-form:hover,
+.close-form:focus {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
@@ -70,7 +99,7 @@
 
 /* 100% Ширина изображения на меньших экранах */
 @media only screen and (max-width: 700px){
-  .modal-content {
+  .modal-form__content {
     width: 100%;
   }
 }
