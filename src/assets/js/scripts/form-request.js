@@ -1,5 +1,3 @@
-import 'https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js'
-
 const TOKEN = "6253302835:AAGpJB0DzUacKKmLHJHmHLWR178mFVP1MN0";
 const CHAT_ID = "-1001970829826";
 const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;

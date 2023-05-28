@@ -6,17 +6,20 @@ const autoprefixer = require("gulp-autoprefixer")
 const cssbeautify = require("gulp-cssbeautify");
 const removeComments = require('gulp-strip-css-comments');
 const rename = require("gulp-rename");
-const rigger = require("gulp-rigger")
-const sass = require("gulp-sass")(require('sass'));
-const cssnano = require("gulp-cssnano");
-const uglify = require("gulp-uglify");
-const plumber = require("gulp-plumber");
-const panini = require("panini");
-const imagemin = require("gulp-imagemin");
-const del = require("del");
-const notify = require("gulp-notify")
-const imagewebp = require("gulp-webp")
-const browserSync = require("browser-sync").create();
+const rigger = require("gulp-rigger") // включает файлы js в один основной
+const sass = require("gulp-sass")(require('sass')); // sass
+const cssnano = require("gulp-cssnano"); // css
+const uglify = require("gulp-uglify"); // минимизирует js
+const plumber = require("gulp-plumber"); //  продолжит работу при ошибках
+const panini = require("panini"); // шаблоны html страниц
+const imagemin = require("gulp-imagemin"); // сжатие изображений 
+const del = require("del"); // delete dist
+const notify = require("gulp-notify") // выводит ошибки
+const imagewebp = require("gulp-webp") // Преобразование изображений в WebP
+const browserSync = require("browser-sync").create(); // браузерная синхронизация 
+
+
+
 
 /* Paths */
 const srcPath = "src/"
@@ -152,6 +155,7 @@ function fonts() {
     .pipe(browserSync.reload({stream: true}));
 }
 
+
 function clean() {
     return del(path.clean)
 }
@@ -166,7 +170,6 @@ function watchFiles() {
 
 const build = gulp.series(clean, gulp.parallel(html, css, js, images, webpImages, fonts))
 const watch = gulp.parallel(build, watchFiles, serve)
-
 
 
 
