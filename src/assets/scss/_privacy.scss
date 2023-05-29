@@ -1,0 +1,33 @@
+.section__privacy{
+  padding-top: 100px;
+  padding-bottom: 75px;
+  @media (max-width: $breakpoint480){
+    padding-top: 75px;
+  }
+}
+
+.privacy{
+  color: $text-color;
+  &__link{
+    color: rgb(20, 20, 229);
+    border-bottom: 2px solid rgb(20, 20, 229);
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+
+  &__title{
+    margin-bottom: 30px;
+    margin-top: 30px;
+    text-align: start;
+  }
+
+  & h3{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  & p {
+    margin-bottom: 40px;
+  }
+}
