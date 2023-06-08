@@ -37,12 +37,13 @@
     justify-content: center;
     gap: 30px;
     @media (max-width: $breakpoint992){
-      padding: 50px 30px;
+      padding: 30px;
     }
   }
 
   &__item_left{
     align-self: center;
+    padding: 20px 0;
   }
 
   &__title{
