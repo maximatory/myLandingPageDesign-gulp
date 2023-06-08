@@ -1,5 +1,8 @@
 .section__worked{
   padding-top: 100px;
+  @media (max-width: $breakpoint768){
+    padding-top: 0px;
+  }
 }
 
 .worked {
