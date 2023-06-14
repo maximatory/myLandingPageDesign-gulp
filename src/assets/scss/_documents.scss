@@ -1,7 +1,7 @@
 .section__documents {
-  padding-top: 150px;
+  padding: 120px 0;
   @media (max-width: $breakpoint768){
-    padding-top: 75px;
+    padding: 35px 0 75px;
   }
 }
 
@@ -51,6 +51,9 @@
     gap: 5px;
     position: relative;
     background-color: rgba($color: #ffffff, $alpha: 0.8);
+    @media (max-width: $breakpoint480){
+      padding: 45px 0 30px 50px;
+    }
     
     & li {
       list-style-type: disc;

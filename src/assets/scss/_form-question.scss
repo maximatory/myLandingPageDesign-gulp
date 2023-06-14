@@ -1,7 +1,7 @@
 .section__question {
   padding-top: 75px;
   padding-bottom: 75px;
-  background-color: #ecebeb;
+  background-color: $bg-grey;
   @media (max-width: $breakpoint768){
     padding-top: 75px;
     padding-bottom: 75px;
