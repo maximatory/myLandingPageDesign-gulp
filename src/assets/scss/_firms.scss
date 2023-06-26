@@ -50,7 +50,8 @@
   &__comment{
     position: absolute;
     background-color: #fff;
-    color: rgba(89,62,13,.8392156863);
+    color: $text-color;
+    font-weight: 500;
     line-height: 20px;
     width: 296px;
     height: 84px;
@@ -58,7 +59,6 @@
     border-radius: 10px;
     top: 290px;
     right: 20px;
-    font-style: italic;
     &::after{
       content: "";
       width: 53px;
